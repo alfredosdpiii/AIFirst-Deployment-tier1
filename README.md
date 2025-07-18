@@ -14,7 +14,7 @@ Streamlit provides the fastest way to create and share data apps. Perfect for:
 
 - Python 3.11 or higher
 - Tavily API key
-- OpenAI or Anthropic API key
+- OpenAI API key
 - GitHub account (for cloud deployment)
 
 ## 🚀 Local Development
@@ -52,8 +52,6 @@ Add your API keys:
 ```env
 TAVILY_API_KEY=tvly-xxxxxxxxxxxxxxxxxxxxx
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx
-# Or use Anthropic:
-ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxx
 ```
 
 ### 3. Run Locally
@@ -112,10 +110,6 @@ In Streamlit Cloud dashboard:
 TAVILY_API_KEY = "tvly-xxxxxxxxxxxxxxxxxxxxx"
 OPENAI_API_KEY = "sk-xxxxxxxxxxxxxxxxxxxxx"
 OPENAI_MODEL = "gpt-4o-mini"
-
-# Or for Anthropic:
-ANTHROPIC_API_KEY = "sk-ant-xxxxxxxxxxxxxxxxxxxxx"
-ANTHROPIC_MODEL = "claude-3-haiku-20240307"
 ```
 
 3. Click "Save"
@@ -238,32 +232,6 @@ streamlit run streamlit_app.py 2>&1 | tee app.log
 # On Streamlit Cloud
 # View logs in dashboard under "Manage app" → "Logs"
 ```
-
-### Analytics
-Streamlit Cloud provides basic analytics:
-- Unique viewers
-- Total views
-- Average view duration
-
-## 🎓 Teaching Notes
-
-### Workshop Setup
-1. Pre-create `.env` files with API keys
-2. Use Git branches for different exercises
-3. Deploy a demo instance for reference
-
-### Common Student Issues
-- Missing dependencies → Check virtual environment
-- API errors → Verify key format and limits
-- Import errors → Check file paths
-- UI not updating → Clear cache with 'c' key
-
-### Best Practices
-1. Start with local development
-2. Test with different queries
-3. Handle errors gracefully
-4. Add loading states
-5. Implement result caching
 
 ## 🔗 Resources
 
