@@ -30,11 +30,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Install dependencies using uv
 uv sync
-
-# Alternative: use pip with requirements.txt
-# python -m venv venv
-# source venv/bin/activate  # On Windows: venv\Scripts\activate
-# pip install -r requirements.txt
 ```
 
 ### 2. Configure API Keys
@@ -133,13 +128,13 @@ secondaryBackgroundColor = "#F0F2F6"
 Streamlit automatically reloads when you save changes:
 ```bash
 # Enable always rerun
-streamlit run streamlit_app.py --server.runOnSave true
+uv run streamlit run streamlit_app.py --server.runOnSave true
 ```
 
 ### Debug Mode
 ```bash
 # Run with debug logging
-streamlit run streamlit_app.py --logger.level debug
+uv run streamlit run streamlit_app.py --logger.level debug
 ```
 
 ### Custom Configuration
@@ -180,7 +175,7 @@ serverAddress = "localhost"
    # Ensure you're in the right directory
    cd shopsage/tier1-streamlit
    # Reinstall dependencies
-   pip install -r requirements.txt
+   uv sync
    ```
 
 2. **API key errors**
@@ -193,13 +188,15 @@ serverAddress = "localhost"
 3. **Port already in use**
    ```bash
    # Use different port
-   streamlit run streamlit_app.py --server.port 8502
+   uv run streamlit run streamlit_app.py --server.port 8502
    ```
 
 4. **Import errors for shopsage_core**
    ```bash
    # Ensure parent directory has shopsage_core.py
    ls ../shopsage_core.py
+   # Try running with uv
+   uv run streamlit run streamlit_app.py
    ```
 
 ### Performance Optimization
@@ -227,7 +224,7 @@ serverAddress = "localhost"
 ### View Logs
 ```bash
 # Streamlit logs
-streamlit run streamlit_app.py 2>&1 | tee app.log
+uv run streamlit run streamlit_app.py 2>&1 | tee app.log
 
 # On Streamlit Cloud
 # View logs in dashboard under "Manage app" → "Logs"
